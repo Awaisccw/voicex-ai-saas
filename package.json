@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "dev": "turbo run dev",
-    "worker": "turbo run worker --filter=web",
     "build": "turbo run build",
+    "start": "turbo run start --filter=web",
+    "db:push": "prisma db push --schema=packages/db/prisma/schema.prisma",
+    "worker": "turbo run worker --filter=web",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "format": "prettier --write \"**/*.{ts,tsx,md,json,css}\"",
