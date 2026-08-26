@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Tokens (Clean high-contrast slate/indigo) */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --card-border: 214 32% 91%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary Electric Indigo Accent */
+    --primary: 238 84% 59%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 238 84% 52%;
+    --primary-muted: 238 84% 96%;
+
+    /* Secondary Neutral */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --secondary-hover: 214 32% 91%;
+
+    /* Muted Text & Backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Neon Cyan/Violet Accent */
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 262 83% 52%;
+
+    /* Semantic States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 0 84% 50%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-hover: 142 71% 38%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-hover: 38 92% 42%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 238 84% 59%;
+  }
+
+  .dark {
+    /* Dark Mode Tokens (Deep obsidian, slate-950, crisp indigo & cyan neon) */
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 6%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 217 33% 15%;
+
+    --popover: 224 71% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 238 84% 66%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 238 84% 72%;
+    --primary-muted: 238 84% 18%;
+
+    --secondary: 217 33% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 217 33% 16%;
+
+    --muted: 217 33% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 262 83% 66%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 262 83% 72%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 0 72% 60%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-hover: 142 71% 55%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-hover: 38 92% 58%;
+
+    --border: 217 33% 15%;
+    --input: 217 33% 15%;
+    --ring: 238 84% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary min-h-screen flex flex-col;
+  }
+}
+
+/* Custom soundwave pulse animation helpers */
+.audio-bar-1 { animation: wavePulse 1.1s ease-in-out infinite; }
+.audio-bar-2 { animation: wavePulse 1.4s ease-in-out infinite 0.2s; }
+.audio-bar-3 { animation: wavePulse 0.9s ease-in-out infinite 0.4s; }
+.audio-bar-4 { animation: wavePulse 1.3s ease-in-out infinite 0.1s; }
+.audio-bar-5 { animation: wavePulse 1.5s ease-in-out infinite 0.3s; }
+
+@keyframes wavePulse {
+  0%, 100% { height: 15%; }
+  50% { height: 95%; }
+}

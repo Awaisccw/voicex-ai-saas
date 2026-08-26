@@ -1,0 +1,10 @@
+{
+  "name": "@saas/tailwind-config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared Tailwind CSS design system preset for SaaS platform",
+  "main": "tailwind.preset.js",
+  "dependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
