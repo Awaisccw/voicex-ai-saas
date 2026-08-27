@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   reactStrictMode: true,
   transpilePackages: ["@saas/ui", "@saas/types", "@saas/core", "@saas/db"],
   experimental: {
